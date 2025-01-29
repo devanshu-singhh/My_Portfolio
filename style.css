@@ -428,6 +428,7 @@ span{
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
+    flex-wrap: wrap;
 }
 
 .projects-container {
@@ -442,6 +443,14 @@ span{
     border-radius: 5px;
     border: .2rem solid var(--main-color);
     
+}
+
+.project .btn-box.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: inline-block;
 }
 
 .project img {
@@ -465,7 +474,6 @@ span{
     font-size: 1.6rem;
     margin: 10px 0;
 }
-
 
 .contact{
     min-height: auto;
@@ -545,7 +553,7 @@ span{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--sec-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-txt p{
@@ -703,6 +711,7 @@ font-size: 1.7rem;
     .education{
         padding: 10rem 4% 5rem;
     }
+    
 
     .contact form .input-box .input-field{
         width: 100%;
