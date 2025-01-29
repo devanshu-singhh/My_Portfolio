@@ -29,6 +29,9 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -45,9 +48,23 @@ body{
 }
 
 .logo{
+    position: relative;
     font-size: 2.5rem;
-    color: var(--text-color);
+    color: #ededed;
+    text-decoration: none;
     font-weight: 600;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
 }
 
 .navbar a{
@@ -80,7 +97,7 @@ section{
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url(webimg.svg) no-repeat center center;
+    background: url(h2.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -403,9 +420,57 @@ span{
     font-size: 2rem;
 }
 
+/* Projects Section */
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project {
+    background-color:  --bg-color;
+    padding: 20px;
+    border-radius: 5px;
+    border: .2rem solid var(--main-color);
+    
+}
+
+.project img {
+    
+        width: 100%; /* or a specific width like 300px */
+        height: 300px; /* set a fixed height */
+        object-fit: cover; /* Ensures the image covers the area without stretching */
+        border-radius: 10px; /* Optional: add rounded corners */
+   
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    color: --text-color;
+    text-align: center;
+}
+
+.project p {
+    color: --text-color;
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+
 .contact{
     min-height: auto;
     padding-bottom: 7rem;
+    background: var(--sec-bg-color);
 }
 
 .contact form{
@@ -476,7 +541,7 @@ span{
 
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
@@ -499,6 +564,7 @@ font-size: 1.7rem;
     z-index: 1;
     overflow: hidden;
     margin-right: 10rem;
+    right: -350px;
 }
 .footer-iconTop a::before{
     content: '';
@@ -525,7 +591,12 @@ font-size: 1.7rem;
 .footer-iconTop a:hover i{
      color: var(--main-color);
 }
-
+/* KEYFRAMES */
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
 /* media queries */
 @media(max-width:1200px){
     html{
