@@ -474,7 +474,25 @@ span{
     font-size: 1.6rem;
     margin: 10px 0;
 }
+.project .btn-box {
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* This will push the button to the bottom */
+    /* padding: 10px 0; */
+}
 
+.project .btn {
+    
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #ededed;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%; 
+    box-sizing: border-box; 
+    text-align: center;
+}
 .contact{
     min-height: auto;
     padding-bottom: 7rem;
@@ -554,6 +572,7 @@ span{
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--bg-color);
+
 }
 
 .footer-txt p{
@@ -571,8 +590,9 @@ font-size: 1.7rem;
     border-radius: .5rem;
     z-index: 1;
     overflow: hidden;
-    margin-right: 10rem;
-    right: -350px;
+    /* margin-right: 10rem; */
+    
+    /* left: 100%; */
 }
 .footer-iconTop a::before{
     content: '';
@@ -691,6 +711,16 @@ font-size: 1.7rem;
         width: 35px;
         height: 35px;
     }
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+    .footer-iconTop{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
@@ -734,6 +764,16 @@ font-size: 1.7rem;
     footer a i{
         align-items: center;
     }
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+    .footer-iconTop{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media(max-width:371px){
@@ -754,6 +794,16 @@ font-size: 1.7rem;
     .footer{
         flex-direction: column-reverse;
         text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+    .footer-iconTop{
+        display: flex;
         align-items: center;
         justify-content: center;
     }
